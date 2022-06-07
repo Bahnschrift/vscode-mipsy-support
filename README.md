@@ -13,7 +13,7 @@ It also contains modified snippets designed to better suit using tab indentation
 - [ ] Improve snippet naming
 - [ ] Add snippets for MIPSY instructions
 - [X] Add better syntax highlighting for negative numbers
-- [ ] Remove syntax highlighting or add warning for instructions not supported by MIPSY
+- [X] Remove syntax highlighting or add warning for instructions not supported by MIPSY
 
 The original readme of [vscode-mips-support](https://github.com/kdarkhan/vscode-mips-support) is below:
 
