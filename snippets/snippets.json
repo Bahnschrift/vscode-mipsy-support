@@ -1,14 +1,4 @@
 {
-    "print_string": {
-        "prefix": "print",
-        "body": [
-            "li\t\\$v0, 4\t\t\t# system call #4 - print string",
-            "la\t\\$a0, ${1:string}",
-            "syscall\t\t\t\t# print $1"
-        ],
-        "description": "print string",
-        "scope": "source.mips"
-    },
     "print_int": {
         "prefix": "print",
         "body": [
@@ -37,6 +27,16 @@
             "syscall\t\t\t\t# print $1"
         ],
         "description": "print double",
+        "scope": "source.mips"
+    },
+    "print_string": {
+        "prefix": "print",
+        "body": [
+            "li\t\\$v0, 4\t\t\t# system call #4 - print string",
+            "la\t\\$a0, ${1:string}",
+            "syscall\t\t\t\t# print $1"
+        ],
+        "description": "print string",
         "scope": "source.mips"
     },
     "print_char": {
