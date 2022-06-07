@@ -6,8 +6,8 @@ It also contains modified snippets designed to better suit using tab indentation
 
 ## TODO
 - [x] Add syntax highlighting for mipsy-specific instructions
-- [ ] Modify snippets to better suit 8-space tab width indentation
-- [ ] Fix typos in existing snippets
+- [X] Modify snippets to better suit 8-space tab width indentation
+- [X] Fix typos in existing snippets
 - [ ] Add missing comments to existing snippets
 - [ ] Improve snippet naming
 - [ ] Add snippets for MIPSY instructions
