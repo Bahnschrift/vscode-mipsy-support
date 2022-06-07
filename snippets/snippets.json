@@ -42,7 +42,7 @@
     "print_char": {
         "prefix": "print",
         "body": [
-            "li\t\\$v0, 11\t\t\t# system call #3 - print character",
+            "li\t\\$v0, 11\t\t\t# system call #11 - print character",
             "la\t\\$a0, ${1:variable}",
             "syscall\t\t\t\t# print $1"
         ],
