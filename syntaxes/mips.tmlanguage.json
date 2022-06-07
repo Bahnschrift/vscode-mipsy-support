@@ -9,12 +9,13 @@
     "name": "MIPS Assembler",
     "patterns": [
         {
-            "comment": "ok actually this are instructions, but one also could call them funtions…",
-            "match": "\\b(mul|abs|div|divu|mulo|mulou|neg|negu|not|rem|remu|rol|ror|li|seq|sge|sgeu|sgt|sgtu|sle|sleu|sne|b|beqz|bge|bgeu|bgt|bgtu|ble|bleu|blt|bltu|bnez|la|ld|ulh|ulhu|ulw|sd|ush|usw|move|mfc1\\.d|l\\.d|l\\.s|s\\.d|s\\.s|push|pop|begin|end)\\b",
+            "comment": "Pseudo-instructions",
+            "match": "\\b(div|divu|rem|remu|seq|sne|sle|sleu|sgt|sgtu|sge|sgeu|abs|neg|negu|not|rol|ror|li|la|ld|sd|push|pop|begin|end|move|bnez|bge|bgeu|bgt|bgtu|ble|bleu)\\b",
             "name": "support.function.pseudo.mips"
         },
         {
-            "match": "\\b(abs\\.d|abs\\.s|add|add\\.d|add\\.s|addi|addiu|addu|and|andi|bc1f|bc1t|beq|bgez|bgezal|bgtz|blez|bltz|bltzal|bne|break|c\\.eq\\.d|c\\.eq\\.s|c\\.le\\.d|c\\.le\\.s|c\\.lt\\.d|c\\.lt\\.s|ceil\\.w\\.d|ceil\\.w\\.s|clo|clz|cvt\\.d\\.s|cvt\\.d\\.w|cvt\\.s\\.d|cvt\\.s\\.w|cvt\\.w\\.d|cvt\\.w\\.s|div|div\\.d|div\\.s|divu|ehb|eret|floor\\.w\\.d|floor\\.w\\.s|j|jal|jalr|jr|lb|lbu|lh|lhu|ll|lui|lw|lwc1|lwl|lwr|madd|maddu|mfc0|mfc1|mfhi|mflo|mov\\.d|mov\\.s|movf|movf\\.d|movf\\.s|movn|movn\\.d|movn\\.s|movt|movt\\.d|movt\\.s|movz|movz\\.d|movz\\.s|msub|mtc0|mtc1|mthi|mtlo|mul|mul\\.d|mul\\.s|mult|multu|neg\\.d|neg\\.s|nop|nor|or|ori|round\\.w\\.d|round\\.w\\.s|sb|sc|sdc1|sh|sll|sllv|slt|slti|sltiu|sltu|sqrt\\.d|sqrt\\.s|sra|srav|srl|srlv|sub|subi|sub\\.d|sub\\.s|subu|sw|swc1|swl|swr|syscall|teq|teqi|tge|tgei|tgeiu|tgeu|tlbp|tlbr|tlbwi|tlbwr|tlt|tlti|tltiu|tltu|trunc\\.w\\.d|trunc\\.w\\.s|xor|xori)\\b",
+            "comment": "Instructions",
+            "match": "\\b(add|addi|addu|addiu|sub|subu|mul|mult|multu|madd|maddu|msub|msubu|div|divu|clo|clz|seb|seh|slt|sltu|slti|sltiu|and|andi|or|ori|nor|xor|xori|rotr|rotrv|sll|sllv|sra|srav|srl|srlv|lui|lb|lbu|lh|lhu|lw|sebsh|sw|mfhi|mflo|mthi|mtlo|movz|movn|b|bal|beq|bne|bgez|bgtz|bltz|blez|bgezal|bltzal|j|jal|jr|jalr|syscall)\\b",
             "name": "support.function.mips"
         },
         {
