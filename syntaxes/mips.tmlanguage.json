@@ -10,7 +10,7 @@
     "patterns": [
         {
             "comment": "Pseudo-instructions",
-            "match": "\\b(div|divu|rem|remu|seq|sne|sle|sleu|sgt|sgtu|sge|sgeu|abs|neg|negu|not|rol|ror|li|la|ld|sd|push|pop|begin|end|move|bnez|bge|bgeu|bgt|bgtu|ble|bleu)\\b",
+            "match": "\\b(div|divu|rem|remu|seq|sne|sle|sleu|sgt|sgtu|sge|sgeu|abs|neg|negu|not|rol|ror|li|la|ld|sd|push|pop|begin|end|move|bnez|bge|bgeu|bgt|bgtu|blt|bltu|ble|bleu)\\b",
             "name": "support.function.pseudo.mips"
         },
         {
