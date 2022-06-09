@@ -1,6 +1,6 @@
 {
     "print int": {
-        "prefix": "print",
+        "prefix": ["print", "int"],
         "body": [
             "li\t\\$v0, 1\t\t\t# system call #1 - print int",
             "la\t\\$a0, ${1:variable}",
@@ -10,7 +10,7 @@
         "scope": "source.mips"
     },
     "print float": {
-        "prefix": "print",
+        "prefix": ["print", "float"],
         "body": [
             "li\t\\$v0, 2\t\t\t# system call #2 - print float",
             "la\t\\$a0, ${1:variable}",
@@ -20,7 +20,7 @@
         "scope": "source.mips"
     },
     "print double": {
-        "prefix": "print",
+        "prefix": ["print", "double"],
         "body": [
             "li\t\\$v0, 3\t\t\t# system call #3 - print double",
             "la\t\\$a0, ${1:variable}",
@@ -30,7 +30,7 @@
         "scope": "source.mips"
     },
     "print string": {
-        "prefix": "print",
+        "prefix": ["print", "string"],
         "body": [
             "li\t\\$v0, 4\t\t\t# system call #4 - print string",
             "la\t\\$a0, ${1:string}",
@@ -40,7 +40,7 @@
         "scope": "source.mips"
     },
     "print char": {
-        "prefix": "print",
+        "prefix": ["print", "char"],
         "body": [
             "li\t\\$v0, 11\t\t\t# system call #11 - print character",
             "la\t\\$a0, ${1:variable}",
