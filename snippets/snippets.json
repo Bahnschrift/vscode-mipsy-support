@@ -412,17 +412,17 @@
     "begin": {
         "prefix": "begin",
         "body": [
-            "begin"
+            "begin\t\t\t\t# move frame pointer"
         ],
-        "description": "begin",
+        "description": "begin - move frame pointer",
         "scope": "source.mips"
     },
     "end": {
         "prefix": "end",
         "body": [
-            "end"
+            "end\t\t\t\t# move frame pointer back"
         ],
-        "description": "end",
+        "description": "end - move frame pointer back",
         "scope": "source.mips"
     },
     "push": {
