@@ -243,7 +243,7 @@
     "la": {
         "prefix": "la",
         "body": [
-            "la\t${1:\\$t1}, ${2:var1}\t\t# "
+            "la\t${1:\\$t1}, ${2:var1}\t\t# Load address of $2 into $1"
         ],
         "description": "load address",
         "scope": "source.mips"
@@ -251,7 +251,7 @@
     "lb": {
         "prefix": "lb",
         "body": [
-            "lb\t${1:\\$t1}, ${2:${3:0}(${4:\\$s1})}\t\t# "
+            "lb\t${1:\\$t1}, ${2:${3:0}(${4:\\$s1})}\t\t# Load byte from $2 into $1"
         ],
         "description": "load byte",
         "scope": "source.mips"
@@ -267,7 +267,7 @@
     "lw": {
         "prefix": "lw",
         "body": [
-            "lw\t${1:\\$t1}, ${2:${3:0}(${4:\\$s1})}\t\t# "
+            "lw\t${1:\\$t1}, ${2:${3:0}(${4:\\$s1})}\t\t# Load word from $2 into $1"
         ],
         "description": "load word",
         "scope": "source.mips"
@@ -316,7 +316,7 @@
     "sb": {
         "prefix": "sb",
         "body": [
-            "sb\t${1:\\$t1}, ${2:${3:0}(${4:\\$s1})}\t\t# "
+            "sb\t${1:\\$t1}, ${2:${3:0}(${4:\\$s1})}\t\t# Store $1 at $2"
         ],
         "description": "store byte",
         "scope": "source.mips"
@@ -356,7 +356,7 @@
     "sw": {
         "prefix": "sw",
         "body": [
-            "sw\t${1:\\$t1}, ${2:${3:0}(${4:\\$s1})}\t\t# "
+            "sw\t${1:\\$t1}, ${2:${3:0}(${4:\\$s1})}\t\t# Store $1 at $2"
         ],
         "description": "store word",
         "scope": "source.mips"
