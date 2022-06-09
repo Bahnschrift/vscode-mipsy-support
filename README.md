@@ -10,7 +10,7 @@ It also contains modified snippets designed to better suit using tab indentation
 - [X] Modify snippets to better suit 8-space tab width indentation
 - [X] Fix typos in existing snippets
 - [ ] Add missing comments to existing snippets
-- [ ] Improve snippet naming
+- [X] Improve snippet naming
 - [ ] Add snippets for MIPSY instructions
 - [X] Add better syntax highlighting for negative numbers
 - [X] Remove syntax highlighting or add warning for instructions not supported by MIPSY
