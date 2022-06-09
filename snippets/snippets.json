@@ -109,6 +109,15 @@
         "description": "read char from user",
         "scope": "source.mips"
     },
+    "return 0": {
+        "prefix": ["return", "exit", "stop"],
+        "body": [
+            "li\t\\$v0, 0\t\t\t# return 0",
+            "jr\t\\$ra"
+        ],
+        "description": "exit program and return 0",
+        "scope": "source.mips"
+    },
     "addi": {
         "prefix": "addi",
         "body": [
