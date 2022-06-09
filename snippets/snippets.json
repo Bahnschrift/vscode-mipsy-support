@@ -50,13 +50,63 @@
         "scope": "source.mips"
     },
     "print newline": {
-        "prefix": "print",
+        "prefix": ["print", "newline"],
         "body": [
             "li\t\\$v0, 11\t\t\t# system call #4 - print character",
             "li\t\\$a0, '\\n'",
             "syscall\t\t\t\t# print newline"
         ],
         "description": "print newline",
+        "scope": "source.mips"
+    },
+    "read int": {
+        "prefix": ["read", "input", "int"],
+        "body": [
+            "li\t\\$v0, 5\t\t\t# system call #5 - read int",
+            "syscall\t\t\t\t# read int",
+            "move\t${1:\\$t0}, \\$v0\t\t# move return value to $1"
+        ],
+        "description": "read integer from user",
+        "scope": "source.mips"
+    },
+    "read float": {
+        "prefix": ["read", "input", "float"],
+        "body": [
+            "li\t\\$v0, 6\t\t\t# system call #6 - read float",
+            "syscall\t\t\t\t# read float",
+            "move\t${1:\\$t0}, \\$f0\t\t# move return value to $1"
+        ],
+        "description": "read float from user",
+        "scope": "source.mips"
+    },
+    "read double": {
+        "prefix": ["read", "input", "double"],
+        "body": [
+            "li\t\\$v0, 7\t\t\t# system call #7 - read double",
+            "syscall\t\t\t\t# read double",
+            "move\t${1:\\$t0}, \\$f0\t\t# move upper return value to $1",
+            "move\t${2:\\$t1}, \\$f1\t\t# move lower return value to $2"
+        ]
+    },
+    "read string": {
+        "prefix": ["read", "input", "string"],
+        "body": [
+            "li\t\\$v0, 8\t\t\t# system call #8 - read string",
+            "syscall\t\t\t\t# read string",
+            "move\t${1:\\$t0}, \\$a0\t\t# move return pointer to $1",
+            "move\t${2:\\$t1}, \\$a1\t\t# move return length to $2"
+        ],
+        "description": "read string from user",
+        "scope": "source.mips"
+    },
+    "read char": {
+        "prefix": ["read", "input", "char"],
+        "body": [
+            "li\t\\$v0, 12\t\t\t# system call #12 - read char",
+            "syscall\t\t\t\t# read char",
+            "move\t${1:\\$t0}, \\$v0\t\t# move return value to $1"
+        ],
+        "description": "read char from user",
         "scope": "source.mips"
     },
     "addi": {
