@@ -42,7 +42,7 @@
             {
                 "language": "mips",
                 "scopeName": "source.mips",
-                "path": "./syntaxes/mips.tmLanguage.json"
+                "path": "./syntaxes/mips.tmlanguage.json"
             }
         ],
         "snippets": [
