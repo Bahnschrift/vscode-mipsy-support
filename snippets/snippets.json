@@ -1,5 +1,5 @@
 {
-    "print_int": {
+    "print int": {
         "prefix": "print",
         "body": [
             "li\t\\$v0, 1\t\t\t# system call #1 - print int",
@@ -9,7 +9,7 @@
         "description": "print int",
         "scope": "source.mips"
     },
-    "print_float": {
+    "print float": {
         "prefix": "print",
         "body": [
             "li\t\\$v0, 2\t\t\t# system call #2 - print float",
@@ -19,7 +19,7 @@
         "description": "print float",
         "scope": "source.mips"
     },
-    "print_double": {
+    "print double": {
         "prefix": "print",
         "body": [
             "li\t\\$v0, 3\t\t\t# system call #3 - print double",
@@ -29,7 +29,7 @@
         "description": "print double",
         "scope": "source.mips"
     },
-    "print_string": {
+    "print string": {
         "prefix": "print",
         "body": [
             "li\t\\$v0, 4\t\t\t# system call #4 - print string",
@@ -39,7 +39,7 @@
         "description": "print string",
         "scope": "source.mips"
     },
-    "print_char": {
+    "print char": {
         "prefix": "print",
         "body": [
             "li\t\\$v0, 11\t\t\t# system call #11 - print character",
@@ -49,7 +49,7 @@
         "description": "print char",
         "scope": "source.mips"
     },
-    "print_newline": {
+    "print newline": {
         "prefix": "print",
         "body": [
             "li\t\\$v0, 11\t\t\t# system call #4 - print character",
