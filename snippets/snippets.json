@@ -153,7 +153,7 @@
     "beq": {
         "prefix": "beq",
         "body": [
-            "beq\t${1:\\$t0}, ${2:\\$t1}, ${3:target}\t# if $1 == $2 then $3"
+            "beq\t${1:\\$t0}, ${2:\\$t1}, ${3:target}\t# if $1 == $2 goto $3"
         ],
         "description": "branch if equal",
         "scope": "source.mips"
@@ -161,7 +161,7 @@
     "bge": {
         "prefix": "bge",
         "body": [
-            "bge\t${1:\\$t0}, ${2:\\$t1}, ${3:target}\t# if $1 >= $2 then $3"
+            "bge\t${1:\\$t0}, ${2:\\$t1}, ${3:target}\t# if $1 >= $2 goto $3"
         ],
         "description": "branch if greater than or equal",
         "scope": "source.mips"
@@ -169,7 +169,7 @@
     "bgt": {
         "prefix": "bgt",
         "body": [
-            "bgt\t${1:\\$t0}, ${2:\\$t1}, ${3:target}\t# if $1 > $2 then $3"
+            "bgt\t${1:\\$t0}, ${2:\\$t1}, ${3:target}\t# if $1 > $2 goto $3"
         ],
         "description": "branch if greater than",
         "scope": "source.mips"
@@ -177,7 +177,7 @@
     "ble": {
         "prefix": "ble",
         "body": [
-            "ble\t${1:\\$t0}, ${2:\\$t1}, ${3:target}\t# if $1 <= $2 then $3"
+            "ble\t${1:\\$t0}, ${2:\\$t1}, ${3:target}\t# if $1 <= $2 goto $3"
         ],
         "description": "branch if less than or equal",
         "scope": "source.mips"
@@ -185,7 +185,7 @@
     "blt": {
         "prefix": "blt",
         "body": [
-            "blt\t${1:\\$t0}, ${2:\\$t1}, ${3:target}\t# if $1 < $2 then $3"
+            "blt\t${1:\\$t0}, ${2:\\$t1}, ${3:target}\t# if $1 < $2 goto $3"
         ],
         "description": "branch if less than",
         "scope": "source.mips"
@@ -193,7 +193,7 @@
     "bne": {
         "prefix": "bne",
         "body": [
-            "bne\t${1:\\$t0}, ${2:\\$t1}, ${3:target}\t# if $1 != $2 then $3"
+            "bne\t${1:\\$t0}, ${2:\\$t1}, ${3:target}\t# if $1 != $2 goto $3"
         ],
         "description": "branch if not equal",
         "scope": "source.mips"
@@ -219,7 +219,7 @@
     "jal": {
         "prefix": "jal",
         "body": [
-            "jal\t${1:target}\t\t\t# jump to $1 and save position to \\$ra"
+            "jal\t${1:target}\t\t\t# goto $1 and save position to \\$ra"
         ],
         "description": "jump and link",
         "scope": "source.mips"
@@ -227,7 +227,7 @@
     "jr": {
         "prefix": "jr",
         "body": [
-            "jr\t${1:\\$ra}\t\t\t# jump to $1"
+            "jr\t${1:\\$ra}\t\t\t# goto $1"
         ],
         "description": "jump register",
         "scope": "source.mips"
@@ -235,7 +235,7 @@
     "j": {
         "prefix": "j",
         "body": [
-            "j\t${1:target}\t\t\t# jump to $1"
+            "j\t${1:target}\t\t\t# goto $1"
         ],
         "description": "jump",
         "scope": "source.mips"
