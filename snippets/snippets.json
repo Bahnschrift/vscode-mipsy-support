@@ -408,5 +408,45 @@
         ],
         "description": "xor immediate",
         "scope": "source.mips"
+    },
+    "begin": {
+        "prefix": "begin",
+        "body": [
+            "begin"
+        ],
+        "description": "begin",
+        "scope": "source.mips"
+    },
+    "end": {
+        "prefix": "end",
+        "body": [
+            "end"
+        ],
+        "description": "end",
+        "scope": "source.mips"
+    },
+    "push": {
+        "prefix": "push",
+        "body": [
+            "push\t${1:\\$t0}\t\t\t# push $1 to the stack"
+        ],
+        "description": "push",
+        "scope": "source.mips"
+    },
+    "pop": {
+        "prefix": "pop",
+        "body": [
+            "pop\t${1:\\$t0}\t\t\t# pop from the stack into $1"
+        ],
+        "description": "pop",
+        "scope": "source.mips"
+    },
+    "syscall": {
+        "prefix": "syscall",
+        "body": [
+            "syscall"
+        ],
+        "description": "syscall",
+        "scope": "source.mips"
     }
 }
