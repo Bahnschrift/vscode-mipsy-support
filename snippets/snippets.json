@@ -49,6 +49,16 @@
         "description": "print char",
         "scope": "source.mips"
     },
+    "print_newline": {
+        "prefix": "print",
+        "body": [
+            "li\t\\$v0, 11\t\t\t# system call #4 - print character",
+            "li\t\\$a0, '\\n'",
+            "syscall\t\t\t\t# print newline"
+        ],
+        "description": "print newline",
+        "scope": "source.mips"
+    },
     "addi": {
         "prefix": "addi",
         "body": [
