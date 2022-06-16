@@ -203,7 +203,7 @@
         "body": [
             "b\t${1:target}\t\t\t# branch to $1"
         ],
-        "description": "branch uncodnitional",
+        "description": "branch unconditional",
         "scope": "source.mips"
     },
     "div": {
