@@ -10,12 +10,12 @@
     "patterns": [
         {
             "comment": "Pseudo-instructions",
-            "match": "\\b(div|divu|rem|remu|seq|sne|sle|sleu|sgt|sgtu|sge|sgeu|abs|neg|negu|not|rol|ror|li|la|ld|sd|push|pop|begin|end|move|bnez|bge|bgeu|bgt|bgtu|blt|bltu|ble|bleu)\\b",
+            "match": "\\b(div|divu|rem|remu|seq|sne|sle|sleu|sgt|sgtu|sge|sgeu|abs|neg|negu|not|rol|ror|li|la|ld|sd|push|pop|begin|end|move|beqz|bnez|bge|bgeu|bgt|bgtu|blt|bltu|ble|bleu)\\b",
             "name": "support.function.pseudo.mips"
         },
         {
             "comment": "Instructions",
-            "match": "\\b(add|addi|addu|addiu|sub|subu|mul|mult|multu|madd|maddu|msub|msubu|div|divu|clo|clz|seb|seh|slt|sltu|slti|sltiu|and|andi|or|ori|nor|xor|xori|rotr|rotrv|sll|sllv|sra|srav|srl|srlv|lui|lb|lbu|lh|lhu|lw|sebsh|sw|mfhi|mflo|mthi|mtlo|movz|movn|b|bal|beq|bne|bgez|bgtz|bltz|blez|bgezal|bltzal|j|jal|jr|jalr|syscall)\\b",
+            "match": "\\b(add|addi|addu|addiu|sub|subu|mul|mult|multu|madd|maddu|msub|msubu|div|divu|clo|clz|seb|seh|slt|sltu|slti|sltiu|and|andi|or|ori|nor|xor|xori|rotr|rotrv|sll|sllv|sra|srav|srl|srlv|lui|lb|lbu|lh|lhu|lw|sb|sh|sw|mfhi|mflo|mthi|mtlo|movz|movn|b|bal|beq|bne|bgez|bgtz|bltz|blez|bgezal|bltzal|j|jal|jr|jalr|syscall)\\b",
             "name": "support.function.mips"
         },
         {
