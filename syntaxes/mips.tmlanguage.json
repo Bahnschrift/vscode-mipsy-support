@@ -19,6 +19,11 @@
             "name": "support.function.mips"
         },
         {
+            "comment": "Breakpoint",
+            "match": "\\bbreak\\b",
+            "name": "support.class.breakpoint.mips"
+        },
+        {
             "match": "\\.(ascii|asciiz|byte|data|double|float|half|kdata|ktext|space|text|word|set\\s*(noat|at|noreorder|reorder))\\b",
             "name": "storage.type.mips"
         },
