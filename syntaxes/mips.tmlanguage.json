@@ -85,6 +85,18 @@
             "name": "constant.numeric.integer.mips"
         },
         {
+            "patterns": [
+                {
+                    "match": "\\(",
+                    "name": "punctuation.section.arguments.begin.bracket.round.mips"
+                },
+                {
+                    "match": "\\)",
+                    "name": "punctuation.section.arguments.end.bracket.round.mips"
+                }
+            ]
+        },
+        {
             "begin": "\"",
             "beginCaptures": {
                 "0": {
