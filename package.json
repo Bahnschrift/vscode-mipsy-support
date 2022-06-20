@@ -15,7 +15,7 @@
         "email": "kbeckett@outlook.com.au"
     },
     "engines": {
-        "vscode": "^1.42.0"
+        "vscode": "^1.68.0"
     },
     "categories": [
         "Programming Languages",
