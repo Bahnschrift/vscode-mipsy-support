@@ -8,11 +8,11 @@ It also contains modified and extra snippets designed to better suit using tab i
 
 ### Colours
 
-![colors](images/highlighting.png)
+![colors](./images/highlighting.png)
 
 ### Snippets
 
-![snippets](images/snippets.png)
+![snippets](./images/snippets.png)
 
 ## TODO
 
