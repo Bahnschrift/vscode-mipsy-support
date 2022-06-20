@@ -21,6 +21,10 @@
         "Programming Languages",
         "Snippets"
     ],
+    "activationEvents": [
+        "onLanguage:mips"
+    ],
+    "main": "./out/mipsy.js",
     "contributes": {
         "languages": [
             {
