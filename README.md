@@ -22,7 +22,6 @@ Version 0.1.0 now has semantic highlighting! This means that labels and constant
 **Settings.json:**
 ```json
 {
-    ...
     "[mips]": {
         "editor.tabSize": 8,
         "editor.insertSpaces": false,
