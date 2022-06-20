@@ -15,7 +15,7 @@
         "email": "kbeckett@outlook.com.au"
     },
     "engines": {
-        "vscode": "^1.5.0"
+        "vscode": "^1.42.0"
     },
     "categories": [
         "Programming Languages",
@@ -51,5 +51,17 @@
                 "path": "./snippets/snippets.json"
             }
         ]
+    },
+    "scripts": {
+        "vscode:prepublish": "npm run compile",
+        "compile": "tsc -p ./",
+        "watch": "tsc -watch -p ./"
+    },
+    "devDependencies": {
+        "@types/node": "^18.0.0",
+        "@types/vscode": "^1.68.0",
+        "@typescript-eslint/eslint-plugin": "^5.28.0",
+        "@typescript-eslint/parser": "^5.28.0",
+        "typescript": "^4.7.4"
     }
 }
