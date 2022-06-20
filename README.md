@@ -1,18 +1,35 @@
 # MIPSY Support
 
-MIPSY Support is a modified version of [vscode-mips-support](https://github.com/kdarkhan/vscode-mips-support) by [kdarkhan](https://github.com/kdarkhan) that adds support for the [mipsy](https://github.com/insou22/mipsy)-specific instructions `push`, `pop`, `begin` and `end`.
+MIPSY Support is a modified version of [vscode-mips-support](https://github.com/kdarkhan/vscode-mips-support) by [kdarkhan](https://github.com/kdarkhan) that adds support for [mipsy](https://github.com/insou22/mipsy)-specific instructions such as `push`, `pop`, `begin` and `end`.
 
 It also contains modified and extra snippets designed to better suit using tab indentation with tab width set to 8 spaces.
 
+Version 0.1.0 now has semantic highlighting! This means that labels and constants get special colours both when defined AND when used.
+
+*NOTE: Semantic highlighting may need to be force enabled with* `"editor.semanticHighlighting.enabled": true,` *in* `settings.json`*.*
+
 ## Features
 
-### Colours
+### Semantic Highlighting
 
-![colors](./images/highlighting.png)
+![colors](./images/semantichighlighting.png)
 
 ### Snippets
 
 ![snippets](./images/snippets.png)
+
+## Recommended Settings
+**Settings.json:**
+```json
+{
+    ...
+    "[mips]": {
+        "editor.tabSize": 8,
+        "editor.insertSpaces": false,
+        "editor.semanticHighlighting.enabled": true,
+    },
+}
+```
 
 ## TODO
 
