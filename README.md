@@ -16,7 +16,7 @@ Version 0.1.0 now has semantic highlighting! This means that labels and constant
 
 ### Snippets
 
-![snippets](./images/snippets.png)
+![snippets](./images/snippets_new.png)
 
 ## Recommended Settings
 **Settings.json:**
