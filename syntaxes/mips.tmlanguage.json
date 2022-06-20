@@ -10,18 +10,18 @@
     "patterns": [
         {
             "comment": "Pseudo-instructions",
-            "match": "\\b(div|divu|rem|remu|seq|sne|sle|sleu|sgt|sgtu|sge|sgeu|abs|neg|negu|not|rol|ror|li|la|ld|sd|push|pop|begin|end|move|beqz|bnez|bge|bgeu|bgt|bgtu|blt|bltu|ble|bleu)\\b",
+            "match": "\\b(abs|b|bal|begin|beqz|bge|bgeu|bgt|bgtu|ble|bleu|blt|bltu|bnez|copy|decr|end|incr|la|li|mod|modu|move|mul|neg|negu|nop|not|pop|push|rem|remu|rol|ror|seq|sge|sgeu|sgt|sgtu|sle|sleu|sne|zeb|zeh)\\b",
             "name": "support.function.pseudo.mips"
         },
         {
             "comment": "Instructions",
-            "match": "\\b(add|addi|addu|addiu|sub|subu|mul|mult|multu|madd|maddu|msub|msubu|div|divu|clo|clz|seb|seh|slt|sltu|slti|sltiu|and|andi|or|ori|nor|xor|xori|rotr|rotrv|sll|sllv|sra|srav|srl|srlv|lui|lb|lbu|lh|lhu|lw|sb|sh|sw|mfhi|mflo|mthi|mtlo|movz|movn|b|bal|beq|bne|bgez|bgtz|bltz|blez|bgezal|bltzal|j|jal|jr|jalr|syscall)\\b",
+            "match": "\\b(add|addi|addiu|addu|and|andi|beq|bgez|bgezal|bgtz|blez|bltz|bltzal|bne|clo|clz|div|divu|j|jal|jalr|jr|lb|lbu|lh|lhu|lui|lw|lwc1|lwl|lwr|madd|maddu|mfhi|mflo|movn|movz|msub|msubu|mthi|mtlo|mult|multu|nor|or|ori|rotr|rotrv|sb|seb|seh|sh|sll|sllv|slt|slti|sltiu|sltu|sra|srav|srl|srlv|sub|subu|sw|swc1|syscall|teq|teqi|tge|tgei|tgeiu|tgeu|tlt|tlti|tltiu|tltu|tne|tnei|wsbh|xor|xori)\\b",
             "name": "support.function.mips"
         },
         {
-            "comment": "Breakpoint",
-            "match": "\\bbreak\\b",
-            "name": "support.class.breakpoint.mips"
+            "comment": "Debugging Instructions",
+            "match": "\\b(break|dbg_print_char|dbg_print_int|dbg_print_str)\\b",
+            "name": "support.function.debugging.mips"
         },
         {
             "match": "\\.(ascii|asciiz|byte|data|double|float|half|kdata|ktext|space|text|word|set\\s*(noat|at|noreorder|reorder))\\b",
