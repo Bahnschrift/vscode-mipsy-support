@@ -35,9 +35,12 @@
             "captures": {
                 "1": {
                     "name": "entity.name.function.label.mips"
+                },
+                "2": {
+                    "name": "punctuation.definition.label.mips"
                 }
             },
-            "match": "\\b([A-Za-z0-9_]+):",
+            "match": "\\b([A-Za-z0-9_]+)(:)",
             "name": "meta.function.label.mips"
         },
         {
@@ -83,6 +86,14 @@
         {
             "match": "(\\b\\d+|-\\b|0(x|X)[a-fA-F0-9]+)\\b",
             "name": "constant.numeric.integer.mips"
+        },
+        {
+            "match": "([\\*=])",
+            "name": "keyword.operator.mips"
+        },
+        {
+            "match": "(,)",
+            "name": "punctuation.separator.mips"
         },
         {
             "patterns": [
