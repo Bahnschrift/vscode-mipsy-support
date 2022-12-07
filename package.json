@@ -9,6 +9,10 @@
     "categories": [
         "Programming Languages"
     ],
+    "activationEvents": [
+        "onLanguage:mips"
+    ],
+    "main": "./out/mips",
     "contributes": {
         "languages": [
             {
@@ -30,6 +34,39 @@
                 "scopeName": "source.mips",
                 "path": "./syntaxes/mips.tmLanguage.json"
             }
+        ],
+        "semanticTokenScopes": [
+            {
+                "scopes": {
+                    "label": [
+                        "entity.name.section.label.mips"
+                    ]
+                }
+            }
         ]
+    },
+    "capabilities": {
+        "completionProvider": {
+            "resolveProvider": true
+        },
+        "definitionProvider": true,
+        "referencesProvider": true,
+        "documentSymbolProvider": true,
+        "renameProvider": true,
+        "semanticTokensProvider": true
+    },
+    "scripts": {
+        "vscode:prepublish": "npm run compile",
+        "compile": "tsc -p ./",
+        "watch": "tsc -watch -p ./",
+        "pretest": "npm run compile && npm run lint",
+        "lint": "eslint src --ext ts"
+    },
+    "devDependencies": {
+        "@types/node": "^18.0.0",
+        "@types/vscode": "^1.68.0",
+        "@typescript-eslint/eslint-plugin": "^5.28.0",
+        "@typescript-eslint/parser": "^5.28.0",
+        "typescript": "^4.7.4"
     }
 }

@@ -1,2 +1,4 @@
 .vscode/settings.json
 test/
+out/
+node_modules/
