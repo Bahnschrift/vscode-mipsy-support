@@ -1,0 +1,35 @@
+{
+    "name": "mipsy-support",
+    "displayName": "MIPSY Support",
+    "description": "",
+    "version": "0.0.1",
+    "engines": {
+        "vscode": "^1.73.0"
+    },
+    "categories": [
+        "Programming Languages"
+    ],
+    "contributes": {
+        "languages": [
+            {
+                "id": "mips",
+                "aliases": [
+                    "Mips",
+                    "mips"
+                ],
+                "extensions": [
+                    ".s",
+                    ".mips"
+                ],
+                "configuration": "./language-configuration.json"
+            }
+        ],
+        "grammars": [
+            {
+                "language": "mips",
+                "scopeName": "source.mips",
+                "path": "./syntaxes/mips.tmLanguage.json"
+            }
+        ]
+    }
+}

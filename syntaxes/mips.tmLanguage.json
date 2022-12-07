@@ -1,0 +1,138 @@
+{
+    "$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+    "name": "Mipsy",
+    "patterns": [
+        {
+            "include": "#comments"
+        },
+        {
+            "include": "#directives"
+        },
+        {
+            "include": "#labels"
+        },
+        {
+            "include": "#instructions"
+        },
+        {
+            "include": "#registers"
+        },
+        {
+            "include": "#strings"
+        },
+        {
+            "include": "#chars"
+        },
+        {
+            "include": "#numeric"
+        },
+        {
+            "include": "#constants"
+        },
+        {
+            "include": "#operators"
+        }
+    ],
+    "repository": {
+        "comments": {
+            "name": "comment.line.number-sign.mips",
+            "begin": "#",
+            "end": "$"
+        },
+        "directives": {
+            "name": "entity.name.tag.directive.mips",
+            "match": "\\.(ascii[z]?|byte|half|word|float|double|align|space|globl|[k]?text|[k]?data)\\b"
+        },
+        "labels": {
+            "name": "entity.name.section.label.mips",
+            "match": "([a-zA-Z_][a-zA-Z0-9_]+:)"
+        },
+        "instructions": {
+            "patterns": [
+                {
+                    "name": "support.function.mips",
+                    "match": "\\b(add|addi|addiu|addu|and|andi|beq|bgez|bgezal|bgtz|blez|bltz|bltzal|bne|clo|clz|div|divu|j|jal|jalr|jr|lb|lbu|lh|lhu|lui|lw|lwc1|lwl|lwr|madd|maddu|mfhi|mflo|movn|movz|msub|msubu|mthi|mtlo|mult|multu|nor|or|ori|rotr|rotrv|sb|seb|seh|sh|sll|sllv|slt|slti|sltiu|sltu|sra|srav|srl|srlv|sub|subu|sw|swc1|syscall|teq|teqi|tge|tgei|tgeiu|tgeu|tlt|tlti|tltiu|tltu|tne|tnei|wsbh|xor|xori)\\b"
+                },
+                {
+                    "name": "support.function.pseudo.mips",
+                    "match": "\\b(abs|b|bal|begin|beqz|bge|bgeu|bgt|bgtu|ble|bleu|blt|bltu|bnez|copy|decr|end|incr|la|li|mod|modu|move|mul|neg|negu|nop|not|pop|push|rem|remu|rol|ror|seq|sge|sgeu|sgt|sgtu|sle|sleu|sne|zeb|zeh)\\b"
+                }
+            ]
+        },
+        "registers": {
+            "patterns": [
+                {
+                    "name": "keyword.operator.register.number.mips",
+                    "match": "(\\$([0-9]|1[0-9]|2[0-9]|3[01]))\\b"
+                },
+                {
+                    "name": "keyword.operator.register.zero.mips",
+                    "match": "(\\$zero)\\b"
+                },
+                {
+                    "name": "keyword.operator.register.at.mips",
+                    "match": "(\\$at)\\b"
+                },
+                {
+                    "name": "keyword.operator.register.value.mips",
+                    "match": "(\\$v[0-1])\\b"
+                },
+                {
+                    "name": "keyword.operator.register.argument.mips",
+                    "match": "(\\$a[0-3])\\b"
+                },
+                {
+                    "name": "keyword.operator.register.temporary.mips",
+                    "match": "(\\$t[0-9])\\b"
+                },
+                {
+                    "name": "keyword.operator.register.saved.mips",
+                    "match": "(\\$s[0-7])\\b"
+                },
+                {
+                    "name": "keyword.operator.register.kernel.mips",
+                    "match": "(\\$k[0-1])\\b"
+                },
+                {
+                    "name": "keyword.operator.register.pointer.mips",
+                    "match": "\\$([gsf]p|ra)\\b"
+                }
+            ]
+        },
+        "strings": {
+            "name": "string.quoted.double.mips",
+            "begin": "\"",
+            "end": "\"",
+            "patterns": [
+                {
+                    "name": "constant.character.escape.mips",
+                    "match": "\\\\."
+                }
+            ]
+        },
+        "chars": {
+            "name": "string.quoted.single.mips",
+            "begin": "'",
+            "end": "'",
+            "patterns": [
+                {
+                    "name": "constant.character.escape.mips",
+                    "match": "\\\\."
+                }
+            ]
+        },
+        "numeric": {
+            "name": "constant.numeric.mips",
+            "match": "-?(0x[0-9a-fA-F]+|0b[01]+|(\\d+(\\.\\d+)?))\\b"
+        },
+        "constants": {
+            "name": "entity.name.function.constant.mips",
+            "match": "([a-zA-Z_][a-zA-Z0-9_]*)\\s*="
+        },
+        "operators": {
+            "name": "keyword.operator.mips",
+            "match": "([-+*=])"
+        }
+    },
+    "scopeName": "source.mips"
+}
