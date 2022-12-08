@@ -43,14 +43,14 @@
             "end": "$"
         },
         "directives": {
-            "name": "entity.name.tag.directive.mips",
+            "name": "keyword.control.directive.mips",
             "match": "\\.(ascii[z]?|byte|half|word|float|double|align|space|globl|[k]?text|[k]?data)\\b"
         },
         "labels": {
             "match": "([a-zA-Z_][a-zA-Z0-9_]*)\\s*(:)",
             "captures": {
                 "1": {
-                    "name": "entity.name.section.label.mips"
+                    "name": "support.class.label.mips"
                 },
                 "2": {
                     "name": "punctuation.separator.label.mips"
@@ -60,11 +60,11 @@
         "instructions": {
             "patterns": [
                 {
-                    "name": "support.function.mips",
+                    "name": "support.function.instruction.mips",
                     "match": "\\b(add|addi|addiu|addu|and|andi|beq|bgez|bgezal|bgtz|blez|bltz|bltzal|bne|clo|clz|div|divu|j|jal|jalr|jr|lb|lbu|lh|lhu|lui|lw|lwc1|lwl|lwr|madd|maddu|mfhi|mflo|movn|movz|msub|msubu|mthi|mtlo|mult|multu|nor|or|ori|rotr|rotrv|sb|seb|seh|sh|sll|sllv|slt|slti|sltiu|sltu|sra|srav|srl|srlv|sub|subu|sw|swc1|syscall|teq|teqi|tge|tgei|tgeiu|tgeu|tlt|tlti|tltiu|tltu|tne|tnei|wsbh|xor|xori)\\b"
                 },
                 {
-                    "name": "support.function.pseudo.mips",
+                    "name": "support.function.pseudoinstruction.mips",
                     "match": "\\b(abs|b|bal|begin|beqz|bge|bgeu|bgt|bgtu|ble|bleu|blt|bltu|bnez|copy|decr|end|incr|la|li|mod|modu|move|mul|neg|negu|nop|not|pop|push|rem|remu|rol|ror|seq|sge|sgeu|sgt|sgtu|sle|sleu|sne|zeb|zeh)\\b"
                 }
             ]

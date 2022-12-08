@@ -39,7 +39,7 @@
             {
                 "scopes": {
                     "label": [
-                        "entity.name.section.label.mips"
+                        "support.class.label.mips"
                     ],
                     "constant": [
                         "entity.name.function.constant.mips"
@@ -59,6 +59,7 @@
         }
     },
     "capabilities": {
+        "hoverProvider": true,
         "completionProvider": {
             "resolveProvider": true
         },
