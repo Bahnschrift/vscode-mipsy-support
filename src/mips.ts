@@ -1,6 +1,12 @@
 import * as vscode from "vscode";
 import { allInstructions } from "./constants";
-import { getLabelDefinitionFor, getLabelUsages, getLabelUsagesFor } from "./helpers";
+import {
+    getConstantDefinitionFor,
+    getConstantUsagesFor,
+    getLabelDefinitionFor,
+    getLabelUsages,
+    getLabelUsagesFor,
+} from "./helpers";
 import { MipsySemanticTokensProvider, tokensLegend } from "./semanticTokens";
 
 class MipsyCompletionItemProvider implements vscode.CompletionItemProvider {
@@ -46,7 +52,18 @@ class MipsyDefinitionProvider implements vscode.DefinitionProvider {
                 const usages = getLabelUsagesFor(document, word);
                 return usages;
             }
+
             return labelDefinition;
+        }
+
+        const constantDefinition = getConstantDefinitionFor(document, word);
+        if (constantDefinition) {
+            if (constantDefinition.range.start.line === position.line) {
+                const usages = getLabelUsagesFor(document, word);
+                return usages;
+            }
+
+            return constantDefinition;
         }
     }
 }
@@ -58,12 +75,19 @@ class MipsyReferenceProvider implements vscode.ReferenceProvider {
         context: vscode.ReferenceContext,
         token: vscode.CancellationToken
     ): vscode.ProviderResult<vscode.Location[]> {
-        const line = document.lineAt(position.line);
         // Get word at cursor
-        const word = document.getWordRangeAtPosition(position);
-        if (word) {
-            const label = document.getText(word);
-            return getLabelUsagesFor(document, label);
+        const wordRange = document.getWordRangeAtPosition(position);
+        if (wordRange) {
+            const word = document.getText(wordRange);
+            const labelUsages = getLabelUsagesFor(document, word);
+            if (labelUsages) {
+                return labelUsages;
+            }
+
+            const constantUsages = getConstantUsagesFor(document, word);
+            if (constantUsages) {
+                return constantUsages;
+            }
         }
     }
 }

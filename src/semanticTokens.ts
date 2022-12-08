@@ -1,7 +1,7 @@
 import * as vscode from "vscode";
-import { getLabelUsages } from "./helpers";
+import { getConstantUsages, getLabelUsages } from "./helpers";
 
-const tokensLegend = new vscode.SemanticTokensLegend(["label"], []);
+const tokensLegend = new vscode.SemanticTokensLegend(["label", "constant"], []);
 
 /**
  * A long term goal could be to completely the textmate grammars with semantic tokenisation.
@@ -19,6 +19,13 @@ class MipsySemanticTokensProvider implements vscode.DocumentSemanticTokensProvid
         for (const label of labelUsages) {
             for (const labelUsageLocation of label.locations) {
                 builder.push(labelUsageLocation.range, "label");
+            }
+        }
+
+        const constantUsages = getConstantUsages(document);
+        for (const constant of constantUsages) {
+            for (const constantUsageLocation of constant.locations) {
+                builder.push(constantUsageLocation.range, "constant");
             }
         }
 

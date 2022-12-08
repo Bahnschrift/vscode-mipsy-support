@@ -40,6 +40,9 @@
                 "scopes": {
                     "label": [
                         "entity.name.section.label.mips"
+                    ],
+                    "constant": [
+                        "entity.name.function.constant.mips"
                     ]
                 }
             }
