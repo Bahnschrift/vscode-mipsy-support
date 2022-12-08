@@ -3,6 +3,8 @@ import { allInstructions, directives, registers } from "./constants";
 import { getConstantDefinitions, getLabelDefinitions, positionValid } from "./helpers";
 
 class MipsyCompletionItemProvider implements vscode.CompletionItemProvider {
+    public static readonly triggerCharacters = [".", "$", "("];
+
     private sortOrders = {
         instruction: 0,
         directive: 3,
@@ -29,6 +31,8 @@ class MipsyCompletionItemProvider implements vscode.CompletionItemProvider {
                 return this.getDirectiveCompletionItems(false);
             } else if (charBefore === "$") {
                 return this.getRegisterCompletionItems(false);
+            } else if (charBefore === "(") {
+                return this.getRegisterCompletionItems(true);
             }
         }
 
