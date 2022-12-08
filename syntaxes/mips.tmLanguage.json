@@ -47,8 +47,15 @@
             "match": "\\.(ascii[z]?|byte|half|word|float|double|align|space|globl|[k]?text|[k]?data)\\b"
         },
         "labels": {
-            "name": "entity.name.section.label.mips",
-            "match": "([a-zA-Z_][a-zA-Z0-9_]*\\s*:)"
+            "match": "([a-zA-Z_][a-zA-Z0-9_]*)\\s*(:)",
+            "captures": {
+                "1": {
+                    "name": "entity.name.section.label.mips"
+                },
+                "2": {
+                    "name": "punctuation.separator.label.mips"
+                }
+            }
         },
         "instructions": {
             "patterns": [
@@ -129,8 +136,15 @@
             "match": "-?(0x[0-9a-fA-F]+|0b[01]+|(\\d+(\\.\\d+)?))\\b"
         },
         "constants": {
-            "name": "entity.name.function.constant.mips",
-            "match": "([a-zA-Z_][a-zA-Z0-9_]*)\\s*="
+            "match": "([a-zA-Z_][a-zA-Z0-9_]*)\\s*(=)",
+            "captures": {
+                "1": {
+                    "name": "entity.name.function.constant.mips"
+                },
+                "2": {
+                    "name": "keyword.operator.assignment.mips"
+                }
+            }
         },
         "operators": {
             "name": "keyword.operator.mips",
