@@ -159,11 +159,13 @@ function positionValid(document: vscode.TextDocument, position: vscode.Position)
 }
 
 export {
+    getLabelDefinitions,
     getLabelDefinitionFor,
     getLabelUsages,
     getLabelUsagesFor,
+    getConstantDefinitions,
     getConstantDefinitionFor,
     getConstantUsages,
     getConstantUsagesFor,
-    positionValid
+    positionValid,
 };

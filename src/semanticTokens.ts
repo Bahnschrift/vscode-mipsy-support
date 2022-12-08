@@ -8,10 +8,7 @@ const tokensLegend = new vscode.SemanticTokensLegend(["label", "constant"], []);
  * For now, all this does is highlight label usages.
  */
 class MipsySemanticTokensProvider implements vscode.DocumentSemanticTokensProvider {
-    public provideDocumentSemanticTokens(
-        document: vscode.TextDocument,
-        token: vscode.CancellationToken
-    ): vscode.ProviderResult<vscode.SemanticTokens> {
+    public provideDocumentSemanticTokens(document: vscode.TextDocument): vscode.ProviderResult<vscode.SemanticTokens> {
         const builder = new vscode.SemanticTokensBuilder(tokensLegend);
 
         // Label Usages

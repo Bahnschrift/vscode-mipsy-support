@@ -158,4 +158,39 @@ const directives: termInfo = {
     globl: "Declare label(s) as global",
 };
 
-export { instructions, pseudoInstructions, allInstructions, directives };
+const registers: termInfo = {
+    zero: "Always 0",
+    at: "Assembler temporary register (reserved)",
+    v0: "Function return value register",
+    v1: "Function return value register",
+    a0: "Function argument register",
+    a1: "Function argument register",
+    a2: "Function argument register",
+    a3: "Function argument register",
+    t0: "Temporary register",
+    t1: "Temporary register",
+    t2: "Temporary register",
+    t3: "Temporary register",
+    t4: "Temporary register",
+    t5: "Temporary register",
+    t6: "Temporary register",
+    t7: "Temporary register",
+    s0: "Saved register",
+    s1: "Saved register",
+    s2: "Saved register",
+    s3: "Saved register",
+    s4: "Saved register",
+    s5: "Saved register",
+    s6: "Saved register",
+    s7: "Saved register",
+    t8: "Temporary register",
+    t9: "Temporary register",
+    k0: "Kernel register",
+    k1: "Kernel register",
+    gp: "Global pointer",
+    sp: "Stack pointer",
+    fp: "Frame pointer",
+    ra: "Return address",
+};
+
+export { allInstructions, directives, registers };
