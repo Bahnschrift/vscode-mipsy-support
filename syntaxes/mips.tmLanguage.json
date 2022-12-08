@@ -31,6 +31,9 @@
         },
         {
             "include": "#operators"
+        },
+        {
+            "include": "#commas"
         }
     ],
     "repository": {
@@ -132,6 +135,10 @@
         "operators": {
             "name": "keyword.operator.mips",
             "match": "([-+*=])"
+        },
+        "commas": {
+            "name": "punctuation.separator.mips",
+            "match": "(,)"
         }
     },
     "scopeName": "source.mips"
