@@ -51,7 +51,7 @@ class MipsyCompletionItemProvider implements vscode.CompletionItemProvider {
                 label: instruction,
                 kind: vscode.CompletionItemKind.Function,
                 detail: allInstructions[instruction],
-                insertText: instruction + (autoIndent ? "\t" : ""),
+                insertText: instruction + (autoIndent && !["syscall", "begin", "end"].includes(instruction) ? "\t" : ""),
                 sortText: this.sortOrders.instruction.toString(),
             };
         });
