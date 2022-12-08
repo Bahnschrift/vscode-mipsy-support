@@ -1,4 +1,6 @@
-const instructions: { [key: string]: string } = {
+type termInfo = { [key: string]: string };
+
+const instructions: termInfo = {
     add: "",
     addi: "Adds an immediate value to the value in $Rs, stores result in $Rt",
     addiu: "Adds an immediate value to the value in $Rs, stores result in $Rt, unsigned",
@@ -84,7 +86,7 @@ const instructions: { [key: string]: string } = {
     xori: "Bitwise xor of the value in $Rs and the immediate value, stores the result in $Rt",
 };
 
-const pseudoInstructions: { [key: string]: string } = {
+const pseudoInstructions: termInfo = {
     abs: "$Rs = |$Rt|",
     b: "Branch unconditionally",
     bal: "",
@@ -139,4 +141,21 @@ const allInstructions = {
     ...pseudoInstructions,
 };
 
-export { instructions, pseudoInstructions, allInstructions };
+const directives: termInfo = {
+    text: "Begin the text segment of memory",
+    data: "Begin the data segment of memory",
+    ktext: "Begin the kernel text segment of memory",
+    kdata: "Begin the kernel data segment of memory",
+    align: "Align the next datum to the specified boundary",
+    ascii: "Store a non-terminated ascii string",
+    asciiz: "Store a null-terminated ascii string",
+    space: "Allocate unitialised memory",
+    byte: "Store successive byte(s)",
+    half: "Store successive half word(s)",
+    word: "Store successive word(s)",
+    float: "Store successive float(s)",
+    double: "Store successive double(s)",
+    globl: "Declare label(s) as global",
+};
+
+export { instructions, pseudoInstructions, allInstructions, directives };

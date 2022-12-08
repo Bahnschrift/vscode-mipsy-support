@@ -165,4 +165,5 @@ export {
     getConstantDefinitionFor,
     getConstantUsages,
     getConstantUsagesFor,
+    positionValid
 };

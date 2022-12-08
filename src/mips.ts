@@ -1,11 +1,11 @@
 import * as vscode from "vscode";
-import { allInstructions } from "./constants";
+import { allInstructions, directives } from "./constants";
 import {
     getConstantDefinitionFor,
     getConstantUsagesFor,
     getLabelDefinitionFor,
-    getLabelUsages,
     getLabelUsagesFor,
+    positionValid,
 } from "./helpers";
 import { MipsySemanticTokensProvider, tokensLegend } from "./semanticTokens";
 
@@ -15,8 +15,12 @@ class MipsyCompletionItemProvider implements vscode.CompletionItemProvider {
         position: vscode.Position,
         token: vscode.CancellationToken
     ): vscode.ProviderResult<vscode.CompletionItem[] | vscode.CompletionList> {
+        if (!positionValid(document, position)) {
+            return [];
+        }
+
         // If the line starts with a tab, we expect either a directive or an instruction
-        return this.getInstructionCompletionItems();
+        return this.getInstructionCompletionItems().concat(this.getDirectiveCompletionItems(document, position));
     }
 
     private getInstructionCompletionItems(): vscode.CompletionItem[] {
@@ -27,6 +31,34 @@ class MipsyCompletionItemProvider implements vscode.CompletionItemProvider {
                 kind: vscode.CompletionItemKind.Function,
                 detail: allInstructions[instruction],
                 insertText: instruction + "\t",
+            });
+        }
+        return items;
+    }
+
+    private getDirectiveCompletionItems(
+        document: vscode.TextDocument,
+        position: vscode.Position
+    ): vscode.CompletionItem[] {
+        let prependDot = true;
+
+        const line = document.lineAt(position.line);
+        const lineText = line.text;
+        const wordRange = document.getWordRangeAtPosition(position);
+        let firstCharOfWord = wordRange ? wordRange.start.character : position.character;
+        if (firstCharOfWord > 0) {
+            if (lineText[firstCharOfWord - 1] === ".") {
+                prependDot = false;
+            }
+        }
+
+        const items: vscode.CompletionItem[] = [];
+        for (const directive in directives) {
+            items.push({
+                label: "." + directive,
+                kind: vscode.CompletionItemKind.Field,
+                detail: directives[directive],
+                insertText: prependDot ? "." + directive : directive,
             });
         }
         return items;
@@ -92,7 +124,7 @@ class MipsyReferenceProvider implements vscode.ReferenceProvider {
     }
 }
 
-vscode.languages.registerCompletionItemProvider("mips", new MipsyCompletionItemProvider());
+vscode.languages.registerCompletionItemProvider("mips", new MipsyCompletionItemProvider(), ".");
 vscode.languages.registerDefinitionProvider("mips", new MipsyDefinitionProvider());
 vscode.languages.registerReferenceProvider("mips", new MipsyReferenceProvider());
 vscode.languages.registerDocumentSemanticTokensProvider("mips", new MipsySemanticTokensProvider(), tokensLegend);
