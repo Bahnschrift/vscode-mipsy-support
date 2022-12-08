@@ -46,7 +46,17 @@
                     ]
                 }
             }
-        ]
+        ],
+        "configuration": {
+            "title": "Mipsy Support",
+            "properties": {
+                "mipsy-support.autoIndentAfterInstructionCompletion": {
+                    "type": "boolean",
+                    "default": true,
+                    "description": "Automatically indent after completing an instruction."
+                }
+            }
+        }
     },
     "capabilities": {
         "completionProvider": {

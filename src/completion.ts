@@ -40,12 +40,14 @@ class MipsyCompletionItemProvider implements vscode.CompletionItemProvider {
     }
 
     private getInstructionCompletionItems(): vscode.CompletionItem[] {
+        const autoIndent = vscode.workspace.getConfiguration("mipsy-support").autoIndentAfterInstructionCompletion;
+
         return Object.keys(allInstructions).map((instruction) => {
             return {
                 label: instruction,
                 kind: vscode.CompletionItemKind.Function,
                 detail: allInstructions[instruction],
-                insertText: instruction + "\t",
+                insertText: instruction + (autoIndent ? "\t" : ""),
                 sortText: this.sortOrders.instruction.toString(),
             };
         });
