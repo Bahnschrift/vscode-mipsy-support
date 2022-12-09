@@ -54,6 +54,12 @@
                     "type": "boolean",
                     "default": true,
                     "description": "Automatically indent after completing an instruction."
+                },
+                "mipsy-support.snippetCommentColumn": {
+                    "type": "integer",
+                    "default": 32,
+                    "minimum": 0,
+                    "description": "Column at which to align comments in snippets. The column is calculated as an offset from the starting column of the snippet.\nShould be a multiple of the tab size, which for mips should be 8."
                 }
             }
         }
