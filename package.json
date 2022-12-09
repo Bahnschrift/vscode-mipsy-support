@@ -5,6 +5,7 @@
     "version": "0.2.0",
     "publisher": "Bahnschrift",
     "homepage": "https://github.com/Bahnschrift/vscode-mipsy-support",
+    "icon": "images/icon.png",
     "repository": {
         "type": "git",
         "url": "https://github.com/Bahnschrift/vscode-mipsy-support"
