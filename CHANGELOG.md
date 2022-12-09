@@ -1,9 +1,14 @@
 # Change Log
 
-All notable changes to the "mipsy-support" extension will be documented in this file.
+## [0.2.0] - 2022-12-10
 
-Check [Keep a Changelog](http://keepachangelog.com/) for recommendations on how to structure this file.
+- Rewrote extension from scratch to implement vscode language features including:
+    - Semantic highlighting
+    - Label & constant defitions & references
+    - Context-aware code completion
+    - Syscall snippets
+    - Hover tooltips
 
-## [Unreleased]
+## [0.2.1] - 2022-12-10
 
-- Initial release
+- Updated icon
