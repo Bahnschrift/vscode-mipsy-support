@@ -120,6 +120,8 @@ class MipsyCompletionItemProvider implements vscode.CompletionItemProvider {
             for (let i = 0; i < line.length; i++) {
                 if (line[i] === "\t") {
                     currentColumn += tabSize - (currentColumn % tabSize);
+                } else {
+                    currentColumn++;
                 }
             }
 
@@ -198,7 +200,7 @@ class MipsyCompletionItemProvider implements vscode.CompletionItemProvider {
                     .appendText((text = "move\t$"))
                     .appendChoice(Object.keys(registers))
                     .appendText((text2 = ", $v0"))
-                    .appendText(requiredCommentIndent(text + text2 + 2, tabSize, commentColumn))
+                    .appendText(requiredCommentIndent(text + text2 + "t0", tabSize, commentColumn))
                     .appendText("# read into $")
                     .appendVariable("1", "register"),
                 sortText: this.sortOrders.snippet.toString(),
@@ -237,7 +239,7 @@ class MipsyCompletionItemProvider implements vscode.CompletionItemProvider {
                     .appendText((text = "move\t$"))
                     .appendChoice(Object.keys(registers))
                     .appendText((text2 = ", $v0"))
-                    .appendText(requiredCommentIndent(text + text2 + 2, tabSize, commentColumn))
+                    .appendText(requiredCommentIndent(text + text2 + "t0", tabSize, commentColumn))
                     .appendText("# read into $")
                     .appendVariable("1", "register"),
                 sortText: this.sortOrders.snippet.toString(),
