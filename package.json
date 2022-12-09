@@ -1,13 +1,24 @@
 {
-    "name": "mipsy-support",
+    "name": "mipsy",
     "displayName": "MIPSY Support",
-    "description": "",
-    "version": "0.0.1",
+    "description": "Provides syntax highlighting, semantic highlighting, snippets, and more for MIPSY (https://github.com/insou22/mipsy).",
+    "version": "0.2.0",
+    "publisher": "Bahnschrift",
+    "homepage": "https://github.com/Bahnschrift/vscode-mipsy-support",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/Bahnschrift/vscode-mipsy-support"
+    },
+    "bugs": {
+        "url": "https://github.com/Bahnschrift/vscode-mipsy-support",
+        "email": "kbeckett@outlook.com.au"
+    },
     "engines": {
         "vscode": "^1.73.0"
     },
     "categories": [
-        "Programming Languages"
+        "Programming Languages",
+        "Snippets"
     ],
     "activationEvents": [
         "onLanguage:mips"
@@ -23,7 +34,8 @@
                 ],
                 "extensions": [
                     ".s",
-                    ".mips"
+                    ".mips",
+                    ".spim"
                 ],
                 "configuration": "./language-configuration.json"
             }

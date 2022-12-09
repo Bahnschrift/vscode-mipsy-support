@@ -1,4 +1,5 @@
 .vscode/settings.json
-test/
+test_workspace/
 out/
 node_modules/
+build/
