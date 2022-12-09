@@ -159,7 +159,7 @@ class MipsyCompletionItemProvider implements vscode.CompletionItemProvider {
                 insertText: new vscode.SnippetString()
                     .appendText((text = "li\t$v0, 4"))
                     .appendText(requiredCommentIndent(text, tabSize, commentColumn))
-                    .appendText("# syscall 1: print_string\n")
+                    .appendText("# syscall 4: print_string\n")
                     .appendText("la\t$a0, ")
                     .appendChoice(getLabelDefinitions(document).map((label) => label.name))
                     .appendText("\n")
